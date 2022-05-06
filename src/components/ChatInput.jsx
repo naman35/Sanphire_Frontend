@@ -16,7 +16,14 @@ export default function ChatInput({ handleSendMsg }) {
 
 
 
+  const sendChat = (event) => {
+    event.preventDefault();
+    if (msg.length > 0) {
+      handleSendMsg(msg);
+      setMsg("");
 
+    }
+  };
   const { transcript, listening, browserSupportsSpeechRecognition } = useSpeechRecognition();
 
   const { speak } = useSpeechSynthesis();
