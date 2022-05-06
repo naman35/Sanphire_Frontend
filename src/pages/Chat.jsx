@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
 import styled from "styled-components";
 import { allUsersRoute, host } from "../utils/APIRoutes";
-import ChatContainer from "../../../../dummy frontend/components/ChatContainer";
-import Contacts from "../../../../dummy frontend/components/Contacts";
-import Welcome from "../../../../dummy frontend/components/Welcome";
+import ChatContainer from "../components/ChatContainer";
+import Contacts from "../components/Contacts";
+import Welcome from "../components/Welcome";
 
 export default function Chat() {
   const navigate = useNavigate();
