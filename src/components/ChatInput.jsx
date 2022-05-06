@@ -17,6 +17,9 @@ export default function ChatInput({ handleSendMsg }) {
 
 
 
+  const { transcript, listening, browserSupportsSpeechRecognition } = useSpeechRecognition();
+
+  const { speak } = useSpeechSynthesis();
 
   return (
     <Container>
