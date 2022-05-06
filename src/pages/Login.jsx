@@ -39,6 +39,27 @@ export default function Login() {
     return true;
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (validateForm()) {
+      const { username, password } = values;
+      const { data } = await axios.post(loginRoute, {
+        username,
+        password,
+      });
+      if (data.status === false) {
+        toast.error(data.msg, toastOptions);
+      }
+      if (data.status === true) {
+        localStorage.setItem(
+          process.env.REACT_APP_LOCALHOST_KEY,
+          JSON.stringify(data.user)
+        );
+
+        navigate("/");
+      }
+    }
+  };
 
   return (
     <div style={{backgroundImage: 'url("https://wallpaperaccess.com/full/2224368.png")'}}>
