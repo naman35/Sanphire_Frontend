@@ -23,4 +23,17 @@ export default function Logout() {
   );
 }
 
-
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(101, 250, 66, 0.98);
+  border: none;
+  cursor: pointer;
+  svg {
+    font-size: 1.3rem;
+    color: black;
+  }
+`;
